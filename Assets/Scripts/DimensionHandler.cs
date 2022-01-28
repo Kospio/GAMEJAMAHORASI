@@ -15,10 +15,21 @@ public class DimensionHandler : MonoBehaviour
 
     public void ChangeDimension()
     {
-        //if 1 => 2
-        //if(currentDimension = ? LayerMask.GetMask("DIMENSION2") : LayerMask.GetMask("DIMENSION2");
-
+        //if 1 => 2  //if 2 => 1
+        if(currentDimension == LayerMask.GetMask("DIMENSION1"))
+        {
+            currentDimension = LayerMask.GetMask("DIMENSION2");
+        }
+        else if (currentDimension == LayerMask.GetMask("DIMENSION2"))
+        {
+            currentDimension = LayerMask.GetMask("DIMENSION1");
+        }
+        else
+        {
+            currentDimension = LayerMask.GetMask("DIMENSION1");
+        }
+            
         mainCamera.cullingMask = currentDimension;
-        player.layer = currentDimension;
+        player.layer = (int)Mathf.Log(currentDimension.value, 2);
     }
 }
