@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public bool canMove; //Hace que acelere antes de colisionar
-    public bool canSwipe; //Evita que se pueda hacer un swipe una vez en movimiento
+    private bool canMove; //Hace que acelere antes de colisionar
+    private bool canSwipe; //Evita que se pueda hacer un swipe una vez en movimiento
 
-    public float waitTime; //Tiempo de control antes de que pueda volver a moverse tras colisionar
+    public float waitTime = 0.1f; //Tiempo de control antes de que pueda volver a moverse tras colisionar
 
-    public float speed; //Velocidad de aceleracion
-    public float maxSpeed; //Velocidad máxima de velocidad
+    public float speed = 2; //Velocidad de aceleracion
+    public float maxSpeed = 10; //Velocidad máxima de velocidad
+
+    [Space]
 
     public Rigidbody rb;
     public DimensionHandler dimensionHandler; 
 
     void Start()
     {
-        dimensionHandler.GetComponent<DimensionHandler>(); 
         canMove = true;
         canSwipe = true; 
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D) && canSwipe)
+        if (Input.GetKeyDown(KeyCode.D) && canSwipe) //Swipe right
         {
-            StartCoroutine(CharacterMovementRight());
+            StartCoroutine(Movement(speed, 0, maxSpeed));
         }
 
-        else if (Input.GetKeyDown(KeyCode.A) && canSwipe)
+        else if (Input.GetKeyDown(KeyCode.A) && canSwipe) //Swipe left
         {
-            StartCoroutine(CharacterMovementLeft()); 
+            StartCoroutine(Movement(-speed, 0, -maxSpeed));
+        }
+
+        else if (Input.GetKeyDown(KeyCode.W) && canSwipe) //Swipe up
+        {
+            StartCoroutine(Movement(0, speed, -maxSpeed));
+        }
+
+        else if (Input.GetKeyDown(KeyCode.S) && canSwipe) //Swipe down
+        {
+            StartCoroutine(Movement(0, -speed, -maxSpeed));
         }
     }
 
@@ -40,49 +51,27 @@ public class CharacterMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Bloque"))
         {
             dimensionHandler.ChangeDimension(); 
-            StartCoroutine(ColliderStopMove());
+            StartCoroutine(StopMovement());
         }
     }
 
-    IEnumerator CharacterMovementLeft()
-    {
-        canSwipe = false; 
-
-        while (canMove)
-        {
-            rb.AddForce(new Vector3(-speed, 0, 0), ForceMode.Force);
-
-            if (rb.velocity.x <= -maxSpeed)
-            {
-                rb.velocity = new Vector3(-maxSpeed,0,0); 
-            }
-
-            Debug.Log(rb.velocity);
-
-            yield return null;
-        }
-    }
-
-    IEnumerator CharacterMovementRight()
+    IEnumerator Movement(float xSpeed, float zSpeed, float speedLimit)
     {
         canSwipe = false;
 
         while (canMove)
         {
-            rb.AddForce(new Vector3(speed, 0, 0), ForceMode.Force);
+            rb.AddForce(new Vector3(xSpeed, 0, zSpeed), ForceMode.Force);
 
-            if (rb.velocity.x >= maxSpeed)
+            if (rb.velocity.x <= speedLimit)
             {
-                rb.velocity = new Vector3(maxSpeed, 0, 0);
+                rb.velocity = new Vector3(speedLimit, 0, 0);
             }
-
-            Debug.Log(rb.velocity);
-
             yield return null;
         }
     }
 
-    IEnumerator ColliderStopMove()
+    IEnumerator StopMovement()
     {
         rb.velocity = Vector3.zero;
         canMove = false;

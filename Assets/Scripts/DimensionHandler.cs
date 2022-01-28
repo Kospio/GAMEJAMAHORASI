@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DimensionHandler : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class DimensionHandler : MonoBehaviour
             
         mainCamera.cullingMask = currentDimension;
         player.layer = (int)Mathf.Log(currentDimension.value, 2);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
