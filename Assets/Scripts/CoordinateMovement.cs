@@ -13,8 +13,8 @@ public class CoordinateMovement : MonoBehaviour
     private IEnumerator coroutineMovement;
 
     [Header("--SWIPE--")]
-    [SerializeField] private float swipeDistance = 50f;
-    [SerializeField] private float swipeTime = 0.3f;
+    [SerializeField] private float swipeDistance = 100f;
+    [SerializeField] private float swipeTime = 0.8f;
     private Vector2 fingerDown;
     private DateTime fingerDownTime;
     private Vector2 fingerUp;
@@ -49,6 +49,7 @@ public class CoordinateMovement : MonoBehaviour
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
             {
+                Debug.Log(Rhit.distance); 
                 if (Rhit.collider.tag == "Bloque") //Hit
                 {
                     while (Vector3.Distance(transform.position, (Rhit.transform.position - rayDirection)) > 0)
@@ -60,7 +61,11 @@ public class CoordinateMovement : MonoBehaviour
                 }
             }
 
-            dimensionHandler.ChangeDimension();
+            if (Rhit.distance > 0.51)
+            {
+                dimensionHandler.ChangeDimension();
+            }
+
             canMove = true;
         }
     }
