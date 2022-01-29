@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bloque
+  - Amplificador
+  - Tickets
+  - Puerta
+  - DestapaPuerta
   layers:
   - Default
   - TransparentFX

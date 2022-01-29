@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI; 
 
 public class CoordinateMovement : MonoBehaviour
 {
-    public DimensionHandler dimensionHandler;
-
+    [Space(10)]
     [Header("--MOVEMENT--")]
     [SerializeField] private float speed = 3f;
     private bool canMove = true; //Hace que acelere antes de colisionar
     private IEnumerator coroutineMovement;
+    public int contadorMovimientos;
+    public Text textoMovimientos; 
 
+    [Space(10)]
     [Header("--SWIPE--")]
     [SerializeField] private float swipeDistance = 100f;
     [SerializeField] private float swipeTime = 0.8f;
@@ -20,8 +23,14 @@ public class CoordinateMovement : MonoBehaviour
     private Vector2 fingerUp;
     private DateTime fingerUpTime;
 
+    [Space(10)]
     [Header("--TP--")]
     private GameObject lastTP;
+
+    [Space(10)]
+    [Header("--GameLogic & Handler--")]
+    public GameLogic gameLogic;
+    public DimensionHandler dimensionHandler;
 
     void Update()
     {
@@ -40,6 +49,9 @@ public class CoordinateMovement : MonoBehaviour
 
     IEnumerator Movement(Vector3 rayDirection)
     {
+        contadorMovimientos++;
+        textoMovimientos.text = contadorMovimientos.ToString(); 
+
         if (lastTP != null) StartCoroutine(reEnableTP());
 
         if (canMove)
@@ -49,7 +61,7 @@ public class CoordinateMovement : MonoBehaviour
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
             {
-                Debug.Log(Rhit.distance); 
+                Debug.Log(Rhit.distance);
                 if (Rhit.collider.tag == "Bloque") //Hit
                 {
                     while (Vector3.Distance(transform.position, (Rhit.transform.position - rayDirection)) > 0)
@@ -125,6 +137,33 @@ public class CoordinateMovement : MonoBehaviour
                     StartCoroutine(coroutineMovement);
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Amplificador"))
+        {
+            Debug.Log("Cojo ampli");
+            gameLogic.GetAmplifier(); 
+        }
+
+        else if (other.CompareTag("Puerta"))
+        {
+            Debug.Log("Cojo puerta");
+            gameLogic.Finish();
+        }
+
+        else if (other.CompareTag("DestapaPuerta"))
+        {
+            Debug.Log("destapo puerta");
+            gameLogic.DoorUntapped(); 
+        }
+
+        else if (other.CompareTag("Tickets"))
+        {
+            Debug.Log("Cojo Ticket"); 
+            gameLogic.GetTicket(); 
         }
     }
 }
