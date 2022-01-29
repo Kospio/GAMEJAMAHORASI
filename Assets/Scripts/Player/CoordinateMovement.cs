@@ -34,6 +34,10 @@ public class CoordinateMovement : MonoBehaviour
     public GameLogic gameLogic;
     public DimensionHandler dimensionHandler;
 
+    [Space(10)]
+    [Header("--Fox--")]
+    public GameObject fox; 
+
     private void Start()
     {
         if(GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
@@ -80,6 +84,8 @@ public class CoordinateMovement : MonoBehaviour
         {
             canMove = false;
 
+            fox.gameObject.GetComponent<Animator>().SetTrigger("Walk"); 
+
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
             {
@@ -100,6 +106,8 @@ public class CoordinateMovement : MonoBehaviour
             {
                 //Dimensions
                 dimensionHandler.ChangeDimension();
+
+                fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
                 //Movements
                 movements++;
                 if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
@@ -151,11 +159,19 @@ public class CoordinateMovement : MonoBehaviour
                 {
                     coroutineMovement = Movement(Vector3.right);
                     StartCoroutine(coroutineMovement);
+
+                    Vector3 Rot = fox.transform.eulerAngles;
+                    Rot.y = 90;
+                    fox.transform.eulerAngles = Rot; 
                 }
                 else if (deltaX < 0) //izquierda
                 {
                     coroutineMovement = Movement(Vector3.left);
                     StartCoroutine(coroutineMovement);
+
+                    Vector3 Rot = fox.transform.eulerAngles;
+                    Rot.y = -90;
+                    fox.transform.eulerAngles = Rot;
                 }
             }
 
@@ -165,11 +181,19 @@ public class CoordinateMovement : MonoBehaviour
                 {
                     coroutineMovement = Movement(Vector3.forward);
                     StartCoroutine(coroutineMovement);
+
+                    Vector3 Rot = fox.transform.eulerAngles;
+                    Rot.y = 0;
+                    fox.transform.eulerAngles = Rot;
                 }
                 else if (deltaY < 0) //abajo
                 {
                     coroutineMovement = Movement(-Vector3.forward);
                     StartCoroutine(coroutineMovement);
+
+                    Vector3 Rot = fox.transform.eulerAngles;
+                    Rot.y = -180;
+                    fox.transform.eulerAngles = Rot;
                 }
             }
         }
@@ -199,6 +223,11 @@ public class CoordinateMovement : MonoBehaviour
         {
             Debug.Log("Cojo Ticket"); 
             gameLogic.GetTicket(); 
+        }
+
+        else if (other.CompareTag("Pinchos"))
+        {
+            fox.gameObject.GetComponent<Animator>().SetTrigger("Death");
         }
     }
 }
