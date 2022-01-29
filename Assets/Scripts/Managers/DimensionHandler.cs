@@ -31,12 +31,18 @@ public class DimensionHandler : MonoBehaviour
         }
             
         mainCamera.cullingMask = currentDimension;
+
         player.layer = (int)Mathf.Log(currentDimension.value, 2);
+        Transform[] allPlayerChildren = player.GetComponentsInChildren<Transform>();
+        foreach (Transform child in allPlayerChildren)
+        {
+            child.gameObject.layer = (int)Mathf.Log(currentDimension.value, 2);
+        }
     }
 
     public void showOtherDimension()
     {
-
+        //mainCamera.cullingMask = currentDimension;
     }
 
     public void RestartLevel()
