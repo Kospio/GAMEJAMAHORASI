@@ -17,19 +17,8 @@ public class DimensionHandler : MonoBehaviour
     public void ChangeDimension()
     {
         //if 1 => 2  //if 2 => 1
-        if(currentDimension == LayerMask.GetMask("DIMENSION1"))
-        {
-            currentDimension = LayerMask.GetMask("DIMENSION2");
-        }
-        else if (currentDimension == LayerMask.GetMask("DIMENSION2"))
-        {
-            currentDimension = LayerMask.GetMask("DIMENSION1");
-        }
-        else
-        {
-            currentDimension = LayerMask.GetMask("DIMENSION1");
-        }
-        
+        currentDimension = (currentDimension == LayerMask.GetMask("DIMENSION1")) ? currentDimension = LayerMask.GetMask("DIMENSION2") : currentDimension = LayerMask.GetMask("DIMENSION1");
+
         //camera
         mainCamera.cullingMask = currentDimension;
 
@@ -42,9 +31,10 @@ public class DimensionHandler : MonoBehaviour
         }
     }
 
-    public void showOtherDimension()
+    public void ShowOtherDimension()
     {
-        //mainCamera.cullingMask = currentDimension;
+        Debug.Log(currentDimension.value);
+        mainCamera.cullingMask = (mainCamera.cullingMask == LayerMask.GetMask("DIMENSION1")) ? mainCamera.cullingMask = LayerMask.GetMask("DIMENSION2") : mainCamera.cullingMask = LayerMask.GetMask("DIMENSION1");
     }
 
     public void RestartLevel()
