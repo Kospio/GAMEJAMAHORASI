@@ -34,6 +34,11 @@ public class DimensionHandler : MonoBehaviour
         player.layer = (int)Mathf.Log(currentDimension.value, 2);
     }
 
+    public void showOtherDimension()
+    {
+
+    }
+
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

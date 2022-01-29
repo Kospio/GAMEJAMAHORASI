@@ -33,6 +33,10 @@ public class CoordinateMovement : MonoBehaviour
     public GameLogic gameLogic;
     public DimensionHandler dimensionHandler;
 
+    private void Start()
+    {
+        MovementsText.text = "Movements: " + movementsNumber.ToString();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canMove)
@@ -76,7 +80,7 @@ public class CoordinateMovement : MonoBehaviour
             {
                 dimensionHandler.ChangeDimension();
                 movementsNumber++;
-                MovementsText.text = "Movements" +movementsNumber.ToString();
+                MovementsText.text = "Movements: " +movementsNumber.ToString();
             }
 
             canMove = true;
