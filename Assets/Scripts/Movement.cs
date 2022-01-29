@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
     private Vector2 fingerUp;
     private DateTime fingerUpTime;
 
+    [Header("--TP--")]
+    private GameObject lastTP;
 
     private void Update()
     {
@@ -43,6 +45,9 @@ public class Movement : MonoBehaviour
 
     IEnumerator MovementCoroutine(float xDistance, float zDistance, Vector3 rayDirection)
     {
+        if(lastTP != null) StartCoroutine(reEnableTP());
+
+
         canMove = false;
         while (true)
         {
@@ -69,6 +74,8 @@ public class Movement : MonoBehaviour
 
     public void Teleport(GameObject otherTP)
     {
+        lastTP = otherTP;
+
         StopCoroutine(coroutineMovement);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         canMove = true;
@@ -78,7 +85,11 @@ public class Movement : MonoBehaviour
         otherTP.GetComponent<Collider>().enabled = false;
         transform.position = new Vector3(otherTP.transform.position.x, transform.position.y, otherTP.transform.position.z);
     }
-
+    IEnumerator reEnableTP()
+    {
+        yield return new WaitForSeconds(1f);
+        lastTP.GetComponent<BoxCollider>().enabled = true;
+    }
 
     public void CheckSwipe()
     {
