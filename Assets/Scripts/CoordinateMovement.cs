@@ -36,24 +36,40 @@ public class CoordinateMovement : MonoBehaviour
 
     private void Start()
     {
-        MovementsText.text = "Movements: " + movements.ToString();
+        if(GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
+        {
+            MovementsText.text = "Movements: " + movements.ToString() + " / " + maxMovements;
+        }
+        else
+        {
+            MovementsText.text = "Movements: " + movements.ToString();
+        }
+
     }
     void Update()
     {
-        if(movements <= maxMovements)
+        if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane && movements >= maxMovements)
         {
-            if (Input.GetMouseButtonDown(0) && canMove)
+            //anim muerte + vuelta a empezar el nivel
+            canMove = false;
+            Debug.Log("YOU DIED");
+        }
+
+        if (canMove)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
                 fingerDown = Input.mousePosition;
                 fingerDownTime = DateTime.Now;
             }
-            if (Input.GetMouseButtonUp(0) && canMove)
+            if (Input.GetMouseButtonUp(0))
             {
                 fingerUp = Input.mousePosition;
                 fingerUpTime = DateTime.Now;
                 CheckSwipe();
             }
         }
+
     }
 
     IEnumerator Movement(Vector3 rayDirection)
@@ -82,9 +98,18 @@ public class CoordinateMovement : MonoBehaviour
 
             if (Rhit.distance > 0.51)
             {
+                //Dimensions
                 dimensionHandler.ChangeDimension();
+                //Movements
                 movements++;
-                MovementsText.text = "Movements: " + movements.ToString();
+                if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
+                {
+                    MovementsText.text = "Movements: " + movements.ToString() + " / " + maxMovements;
+                }
+                else
+                {
+                    MovementsText.text = "Movements: " + movements.ToString();
+                }
             }
 
             canMove = true;
