@@ -239,6 +239,7 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("DIEEEEEEEEEEEE");
         fox.gameObject.GetComponent<Animator>().SetTrigger("Die");
     }
 }
