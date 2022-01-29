@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class CoordinateMovement : MonoBehaviour
 {
@@ -37,11 +37,11 @@ public class CoordinateMovement : MonoBehaviour
     [Space(10)]
     [Header("--Fox--")]
     public GameObject fox;
-    public SoundController soundController; 
+    public SoundController soundController;
 
     private void Start()
     {
-        if(GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
+        if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
         {
             MovementsText.text = "Movements: " + movements.ToString() + " / " + maxMovements;
         }
@@ -83,14 +83,16 @@ public class CoordinateMovement : MonoBehaviour
         {
             canMove = false;
 
-            fox.gameObject.GetComponent<Animator>().SetTrigger("Walk"); 
-
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
             {
                 //Debug.Log(Rhit.distance);
                 if (Rhit.collider.tag == "Bloque") //Hit
                 {
+                    if (Vector3.Distance(transform.position, (Rhit.transform.position - rayDirection)) > 0)
+                    {
+                        fox.gameObject.GetComponent<Animator>().SetTrigger("Walk");
+                    }
 
                     while (Vector3.Distance(transform.position, (Rhit.transform.position - rayDirection)) > 0)
                     {
@@ -106,9 +108,10 @@ public class CoordinateMovement : MonoBehaviour
                 //Dimensions
                 dimensionHandler.ChangeDimension();
 
-                soundController.CambioDimension(); 
+                soundController.CambioDimension();
 
                 fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
+
                 //Movements
                 movements++;
                 if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
@@ -127,7 +130,7 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Teleport(GameObject otherTP)
     {
-        soundController.Teleport(); 
+        soundController.Teleport();
 
         lastTP = otherTP;
         otherTP.GetComponent<Collider>().enabled = false;
@@ -156,49 +159,46 @@ public class CoordinateMovement : MonoBehaviour
             float deltaX = fingerUp.x - fingerDown.x;
             float deltaY = fingerUp.y - fingerDown.y;
 
-            if (Mathf.Abs(deltaX) > swipeDistance)
+
+            if (deltaX > 0 && deltaX > deltaY && Mathf.Abs(deltaX) > swipeDistance) //derecha
             {
-                if (deltaX > 0) //derecha
-                {
-                    coroutineMovement = Movement(Vector3.right);
-                    StartCoroutine(coroutineMovement);
+                coroutineMovement = Movement(Vector3.right);
+                StartCoroutine(coroutineMovement);
 
-                    Vector3 Rot = fox.transform.eulerAngles;
-                    Rot.y = 90;
-                    fox.transform.eulerAngles = Rot; 
-                }
-                else if (deltaX < 0) //izquierda
-                {
-                    coroutineMovement = Movement(Vector3.left);
-                    StartCoroutine(coroutineMovement);
+                Vector3 Rot = fox.transform.eulerAngles;
+                Rot.y = 90;
+                fox.transform.eulerAngles = Rot;
+            }
+            else if (deltaX < 0 && deltaX < deltaY && Mathf.Abs(deltaX) > swipeDistance) //izquierda
+            {
+                coroutineMovement = Movement(Vector3.left);
+                StartCoroutine(coroutineMovement);
 
-                    Vector3 Rot = fox.transform.eulerAngles;
-                    Rot.y = -90;
-                    fox.transform.eulerAngles = Rot;
-                }
+                Vector3 Rot = fox.transform.eulerAngles;
+                Rot.y = -90;
+                fox.transform.eulerAngles = Rot;
             }
 
-            if (Mathf.Abs(deltaY) > swipeDistance)
+            else if (deltaY > 0 && deltaX < deltaY && Mathf.Abs(deltaY) > swipeDistance) //arriba
             {
-                if (deltaY > 0) //arriba
-                {
-                    coroutineMovement = Movement(Vector3.forward);
-                    StartCoroutine(coroutineMovement);
+                coroutineMovement = Movement(Vector3.forward);
+                StartCoroutine(coroutineMovement);
 
-                    Vector3 Rot = fox.transform.eulerAngles;
-                    Rot.y = 0;
-                    fox.transform.eulerAngles = Rot;
-                }
-                else if (deltaY < 0) //abajo
-                {
-                    coroutineMovement = Movement(-Vector3.forward);
-                    StartCoroutine(coroutineMovement);
-
-                    Vector3 Rot = fox.transform.eulerAngles;
-                    Rot.y = -180;
-                    fox.transform.eulerAngles = Rot;
-                }
+                Vector3 Rot = fox.transform.eulerAngles;
+                Rot.y = 0;
+                fox.transform.eulerAngles = Rot;
             }
+
+            else if (deltaY < 0 && deltaY < deltaX && Mathf.Abs(deltaY) > swipeDistance) //abajo
+            {
+                coroutineMovement = Movement(-Vector3.forward);
+                StartCoroutine(coroutineMovement);
+
+                Vector3 Rot = fox.transform.eulerAngles;
+                Rot.y = -180;
+                fox.transform.eulerAngles = Rot;
+            }
+
         }
     }
 
@@ -206,15 +206,15 @@ public class CoordinateMovement : MonoBehaviour
     {
         if (other.CompareTag("Amplificador"))
         {
-            soundController.Agarrar(); 
+            soundController.Agarrar();
 
             Debug.Log("Cojo ampli");
-            gameLogic.GetAmplifier(); 
+            gameLogic.GetAmplifier();
         }
 
         else if (other.CompareTag("Puerta"))
         {
-            soundController.Victoria(); 
+            soundController.Victoria();
 
             Debug.Log("Cojo puerta");
             gameLogic.Finish();
@@ -225,21 +225,21 @@ public class CoordinateMovement : MonoBehaviour
             soundController.Agarrar();
 
             Debug.Log("destapo puerta");
-            gameLogic.DoorUntapped(); 
+            gameLogic.DoorUntapped();
         }
 
         else if (other.CompareTag("Tickets"))
         {
             soundController.Agarrar();
 
-            Debug.Log("Cojo Ticket"); 
-            gameLogic.GetTicket(); 
+            Debug.Log("Cojo Ticket");
+            gameLogic.GetTicket();
         }
     }
 
     public void Die()
     {
-        canMove = false; 
+        canMove = false;
         Debug.Log("DIEEEEEEEEEEEE");
         fox.gameObject.GetComponent<Animator>().SetTrigger("Die");
     }

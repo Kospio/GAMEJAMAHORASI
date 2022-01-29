@@ -22,21 +22,18 @@ public class SoundController : MonoBehaviour
     {
         SFXAudioSource.clip = pasos; 
         SFXAudioSource.Play(); 
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 
     public void Muerte()
     {
         SFXAudioSource.clip = muerte;
         SFXAudioSource.Play();
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 
     public void Agarrar()
     {
         SFXAudioSource.clip = agarrar;
         SFXAudioSource.Play();
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 
     public void CambioDimension()
@@ -55,20 +52,17 @@ public class SoundController : MonoBehaviour
 
         SFXAudioSource.clip = cambioDimension;
         SFXAudioSource.Play();
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 
     public void Teleport()
     {
         SFXAudioSource.clip = teleport;
         SFXAudioSource.Play();
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 
     public void Victoria()
     {
         SFXAudioSource.clip = victoria;
         SFXAudioSource.Play();
-        Debug.Log("FUNCIONA EL SONIDO DEL PASO");
     }
 }
