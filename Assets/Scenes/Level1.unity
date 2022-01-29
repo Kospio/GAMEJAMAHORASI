@@ -16071,9 +16071,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1405839719}
     - target: {fileID: 2013237266570343127, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+      propertyPath: swipeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013237266570343127, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
       propertyPath: MovementsText
       value: 
       objectReference: {fileID: 2108128493}
+    - target: {fileID: 2013237266570343127, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+      propertyPath: swipeDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2013237266570343127, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
       propertyPath: dimensionHandler
       value: 
@@ -16130,5 +16138,9 @@ PrefabInstance:
       propertyPath: musicaMetalAudioSource
       value: 
       objectReference: {fileID: 1946246670}
+    - target: {fileID: 2052178932123555594, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.876
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}

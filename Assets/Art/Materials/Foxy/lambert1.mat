@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lambert3
+  m_Name: lambert1
   m_Shader: {fileID: 4800000, guid: addf760996e7e05409e0074f3cc74eb7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -57,10 +57,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 0.358
+    - _Brightness: 0.2
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Detail: 0.199
+    - _Detail: 0.225
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -73,10 +73,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 0.509
+    - _Strength: 0.312
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8867924, g: 0.61062825, b: 0, a: 1}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
