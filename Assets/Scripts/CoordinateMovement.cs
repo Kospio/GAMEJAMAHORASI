@@ -49,8 +49,7 @@ public class CoordinateMovement : MonoBehaviour
 
     IEnumerator Movement(Vector3 rayDirection)
     {
-        contadorMovimientos++;
-        textoMovimientos.text = contadorMovimientos.ToString(); 
+        
 
         if (lastTP != null) StartCoroutine(reEnableTP());
 
@@ -64,6 +63,7 @@ public class CoordinateMovement : MonoBehaviour
                 Debug.Log(Rhit.distance);
                 if (Rhit.collider.tag == "Bloque") //Hit
                 {
+
                     while (Vector3.Distance(transform.position, (Rhit.transform.position - rayDirection)) > 0)
                     {
                         transform.position = Vector3.MoveTowards(transform.position, (Rhit.transform.position - rayDirection), speed * Time.deltaTime);
@@ -76,6 +76,8 @@ public class CoordinateMovement : MonoBehaviour
             if (Rhit.distance > 0.51)
             {
                 dimensionHandler.ChangeDimension();
+                contadorMovimientos++;
+                textoMovimientos.text = contadorMovimientos.ToString();
             }
 
             canMove = true;
