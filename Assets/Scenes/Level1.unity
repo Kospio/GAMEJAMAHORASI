@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementsText: {fileID: 2108128493}
   movements: 0
-  maxMovements: 999999
+  maxMovements: 10
   speed: 5
   swipeDistance: 50
   swipeTime: 0.3
@@ -12756,7 +12756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cff329dec74bff4cafd4f67ba7605b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDifficulty: 1
+  currentDifficulty: 2
 --- !u!4 &1582435210
 Transform:
   m_ObjectHideFlags: 0
@@ -15669,8 +15669,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11, y: -7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -13.5, y: -12.5}
+  m_SizeDelta: {x: 178.2066, y: 69.269}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2108128493
 MonoBehaviour:
@@ -15705,7 +15705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Movimientos
+  m_Text: 'Movements: 00 / 00'
 --- !u!222 &2108128494
 CanvasRenderer:
   m_ObjectHideFlags: 0
