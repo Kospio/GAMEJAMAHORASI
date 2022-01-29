@@ -1014,12 +1014,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96489409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 1, z: 6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1891641956}
-  m_RootOrder: 1
+  m_Father: {fileID: 906842751}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &96489411
 MonoBehaviour:
@@ -1130,7 +1130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118457535
 GameObject:
@@ -1462,7 +1462,6 @@ GameObject:
   - component: {fileID: 162985802}
   - component: {fileID: 162985801}
   - component: {fileID: 162985800}
-  - component: {fileID: 162985799}
   m_Layer: 6
   m_Name: Dim1Bloque (16)
   m_TagString: Bloque
@@ -1482,26 +1481,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &162985799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162985797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &162985800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1597,7 +1578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &171961669
 MonoBehaviour:
@@ -1838,7 +1819,6 @@ GameObject:
   - component: {fileID: 201274602}
   - component: {fileID: 201274601}
   - component: {fileID: 201274600}
-  - component: {fileID: 201274599}
   m_Layer: 6
   m_Name: Dim1Bloque (12)
   m_TagString: Bloque
@@ -1858,26 +1838,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &201274599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201274597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &201274600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1987,7 +1949,7 @@ Transform:
   m_Children:
   - {fileID: 1206564761}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &205005526
 Rigidbody:
@@ -2023,9 +1985,10 @@ MonoBehaviour:
   speed: 5
   swipeDistance: 50
   swipeTime: 0.3
-  gameLogic: {fileID: 1405839719}
+  gameLogic: {fileID: 0}
   dimensionHandler: {fileID: 375158381}
   fox: {fileID: 251880931}
+  soundController: {fileID: 0}
 --- !u!1 &229373082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,7 +2113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251880931 stripped
 GameObject:
@@ -2284,7 +2247,6 @@ GameObject:
   - component: {fileID: 255681770}
   - component: {fileID: 255681769}
   - component: {fileID: 255681768}
-  - component: {fileID: 255681767}
   m_Layer: 6
   m_Name: Dim1Bloque (14)
   m_TagString: Bloque
@@ -2304,26 +2266,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255681767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255681765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &255681768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2556,7 +2500,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &264780677
 MonoBehaviour:
@@ -3125,7 +3069,6 @@ GameObject:
   - component: {fileID: 319836783}
   - component: {fileID: 319836782}
   - component: {fileID: 319836781}
-  - component: {fileID: 319836780}
   m_Layer: 6
   m_Name: Dim1Bloque (10)
   m_TagString: Bloque
@@ -3145,26 +3088,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &319836780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319836778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &319836781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3417,7 +3342,6 @@ GameObject:
   - component: {fileID: 373306831}
   - component: {fileID: 373306830}
   - component: {fileID: 373306829}
-  - component: {fileID: 373306828}
   m_Layer: 6
   m_Name: Dim1Bloque (2)
   m_TagString: Bloque
@@ -3439,24 +3363,6 @@ Transform:
   m_Father: {fileID: 1891641956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &373306828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373306826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &373306829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4902,7 +4808,6 @@ GameObject:
   - component: {fileID: 551493826}
   - component: {fileID: 551493825}
   - component: {fileID: 551493824}
-  - component: {fileID: 551493823}
   m_Layer: 6
   m_Name: Dim1Bloque (11)
   m_TagString: Bloque
@@ -4922,26 +4827,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &551493823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551493821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &551493824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6504,7 +6391,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776818766
 GameObject:
@@ -6906,7 +6793,7 @@ Transform:
   - {fileID: 357807084}
   - {fileID: 1007051729}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906842750
 GameObject:
@@ -6922,7 +6809,7 @@ GameObject:
   - component: {fileID: 906842753}
   - component: {fileID: 906842752}
   m_Layer: 6
-  m_Name: Dim1Bloque (6)
+  m_Name: CosaQueGira
   m_TagString: Bloque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6935,12 +6822,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906842750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8, y: 1, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1891641956}
-  m_RootOrder: 4
+  m_Children:
+  - {fileID: 96489410}
+  - {fileID: 1556732022}
+  m_Father: {fileID: 1007051729}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906842752
 MonoBehaviour:
@@ -7119,7 +7008,7 @@ RectTransform:
   - {fileID: 2108128492}
   - {fileID: 282961485}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7138,7 +7027,6 @@ GameObject:
   - component: {fileID: 915518919}
   - component: {fileID: 915518918}
   - component: {fileID: 915518917}
-  - component: {fileID: 915518916}
   m_Layer: 6
   m_Name: Dim1Bloque (19)
   m_TagString: Bloque
@@ -7158,26 +7046,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915518916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915518914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &915518917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7253,7 +7123,6 @@ GameObject:
   - component: {fileID: 917331533}
   - component: {fileID: 917331532}
   - component: {fileID: 917331531}
-  - component: {fileID: 917331530}
   m_Layer: 6
   m_Name: Dim1Bloque (20)
   m_TagString: Bloque
@@ -7273,26 +7142,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &917331530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917331528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &917331531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7659,7 +7510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &960114426
 MonoBehaviour:
@@ -8357,6 +8208,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 906842751}
   - {fileID: 1328065924}
   - {fileID: 960114425}
   - {fileID: 171961668}
@@ -8890,7 +8742,6 @@ GameObject:
   - component: {fileID: 1072694274}
   - component: {fileID: 1072694273}
   - component: {fileID: 1072694272}
-  - component: {fileID: 1072694271}
   m_Layer: 6
   m_Name: Dim1Bloque (4)
   m_TagString: Bloque
@@ -8910,26 +8761,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1072694271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072694269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1072694272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9121,7 +8954,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1082752878
 MonoBehaviour:
@@ -9708,7 +9541,6 @@ GameObject:
   - component: {fileID: 1191109843}
   - component: {fileID: 1191109842}
   - component: {fileID: 1191109841}
-  - component: {fileID: 1191109840}
   m_Layer: 6
   m_Name: Dim1Bloque (1)
   m_TagString: Bloque
@@ -9728,26 +9560,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1191109840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191109838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1191109841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10748,7 +10562,6 @@ GameObject:
   - component: {fileID: 1294803640}
   - component: {fileID: 1294803639}
   - component: {fileID: 1294803638}
-  - component: {fileID: 1294803637}
   m_Layer: 6
   m_Name: Dim1Bloque (15)
   m_TagString: Bloque
@@ -10768,26 +10581,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1294803637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294803635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1294803638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10979,7 +10774,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1328065925
 MonoBehaviour:
@@ -11453,7 +11248,6 @@ GameObject:
   - component: {fileID: 1384815856}
   - component: {fileID: 1384815855}
   - component: {fileID: 1384815854}
-  - component: {fileID: 1384815853}
   m_Layer: 6
   m_Name: Dim1Bloque (18)
   m_TagString: Bloque
@@ -11473,26 +11267,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1384815853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384815851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1384815854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12036,57 +11812,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394829083}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1405839717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1405839718}
-  - component: {fileID: 1405839719}
-  m_Layer: 6
-  m_Name: --GAME_DIRECTOR--
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1405839718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405839717}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1405839719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405839717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2760f3cfa96f0b4ab288c1e4a1749f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gotAmplifier: 0
-  amplifier: {fileID: 0}
-  gotTickets: 0
-  tickets: {fileID: 0}
-  doorUntapp: {fileID: 0}
-  door: {fileID: 0}
-  finish: 0
-  dimensionHandler: {fileID: 375158381}
 --- !u!1 &1412001424
 GameObject:
   m_ObjectHideFlags: 0
@@ -13453,12 +13178,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556732021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 1, z: 5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1891641956}
-  m_RootOrder: 14
+  m_Father: {fileID: 906842751}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1556732023
 MonoBehaviour:
@@ -13789,7 +13514,6 @@ GameObject:
   - component: {fileID: 1594034391}
   - component: {fileID: 1594034390}
   - component: {fileID: 1594034389}
-  - component: {fileID: 1594034388}
   m_Layer: 6
   m_Name: Dim1Bloque (17)
   m_TagString: Bloque
@@ -13809,26 +13533,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594034388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594034386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1594034389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13904,7 +13610,6 @@ GameObject:
   - component: {fileID: 1606345081}
   - component: {fileID: 1606345080}
   - component: {fileID: 1606345079}
-  - component: {fileID: 1606345078}
   m_Layer: 6
   m_Name: Dim1Bloque (5)
   m_TagString: Bloque
@@ -13924,26 +13629,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1606345078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606345076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1606345079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14115,7 +13802,6 @@ GameObject:
   - component: {fileID: 1622135321}
   - component: {fileID: 1622135320}
   - component: {fileID: 1622135319}
-  - component: {fileID: 1622135318}
   m_Layer: 6
   m_Name: Dim1Bloque (8)
   m_TagString: Bloque
@@ -14135,26 +13821,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891641956}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1622135318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622135316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3570a2ea62f1914193eccf5b7eb5250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1622135319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14750,7 +14418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1680699299
 MonoBehaviour:
@@ -15278,7 +14946,7 @@ Transform:
   - {fileID: 258592565}
   - {fileID: 172499954}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813347481
 GameObject:
@@ -15596,10 +15264,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 373306827}
-  - {fileID: 96489410}
   - {fileID: 1072694270}
   - {fileID: 1606345077}
-  - {fileID: 906842751}
   - {fileID: 1622135317}
   - {fileID: 319836779}
   - {fileID: 551493822}
@@ -15609,7 +15275,6 @@ Transform:
   - {fileID: 162985798}
   - {fileID: 1594034387}
   - {fileID: 1384815852}
-  - {fileID: 1556732022}
   - {fileID: 915518915}
   - {fileID: 917331529}
   - {fileID: 1191109839}
@@ -15793,7 +15458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1949505627
 GameObject:
@@ -16498,8 +16163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.5, y: -12.5}
-  m_SizeDelta: {x: 178.2066, y: 69.269}
+  m_AnchoredPosition: {x: -19.8, y: -13.3}
+  m_SizeDelta: {x: 165.2774, y: 69.269}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2108128493
 MonoBehaviour:
@@ -16767,7 +16432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007051729}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2133308609
 MonoBehaviour:
@@ -16975,5 +16640,5 @@ Transform:
   m_Children:
   - {fileID: 1970128614}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

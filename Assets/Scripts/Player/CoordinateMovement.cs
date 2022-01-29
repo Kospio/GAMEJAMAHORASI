@@ -41,8 +41,6 @@ public class CoordinateMovement : MonoBehaviour
 
     private void Start()
     {
-        soundController = soundController.GetComponent<SoundController>(); 
-
         if(GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
         {
             MovementsText.text = "Movements: " + movements.ToString() + " / " + maxMovements;
@@ -51,13 +49,12 @@ public class CoordinateMovement : MonoBehaviour
         {
             MovementsText.text = "Movements: " + movements.ToString();
         }
-
     }
     void Update()
     {
         if (GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane && movements >= maxMovements)
         {
-            //anim muerte + vuelta a empezar el nivel
+            Die();
             canMove = false;
             Debug.Log("YOU DIED");
         }
@@ -76,7 +73,6 @@ public class CoordinateMovement : MonoBehaviour
                 CheckSwipe();
             }
         }
-
     }
 
     IEnumerator Movement(Vector3 rayDirection)
@@ -246,5 +242,10 @@ public class CoordinateMovement : MonoBehaviour
 
             fox.gameObject.GetComponent<Animator>().SetTrigger("Death");
         }
+    }
+
+    public void Die()
+    {
+
     }
 }
