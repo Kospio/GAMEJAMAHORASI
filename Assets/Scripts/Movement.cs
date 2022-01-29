@@ -1,39 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Movement : MonoBehaviour
 {
     public DimensionHandler dimensionHandler;
 
-    [SerializeField] private float speed = 3f;
-    [SerializeField] private float raycastDistance = 1.4f;
+    //EL PLAYER TIENE ESCALA 0.5
+
+    [Header("--MOVEMENT--")]
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float raycastDistance = .5f;
 
     private bool canMove = true;
     IEnumerator coroutineMovement;
 
+    [Header("--SWIPE--")]
+    [SerializeField] private float swipeDistance = 50f;
+    [SerializeField] private float swipeTime= 0.3f;
+    private Vector2 fingerDown;
+    private DateTime fingerDownTime;
+    private Vector2 fingerUp;
+    private DateTime fingerUpTime;
+
+
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.D) && canMove) //Swipe right
+        if (Input.GetMouseButtonDown(0) && canMove)
         {
-            coroutineMovement = MovementCoroutine(speed, 0, Vector3.right);
-            StartCoroutine(coroutineMovement);
+            fingerDown = Input.mousePosition;
+            fingerDownTime = DateTime.Now;
         }
-        else if (Input.GetKeyDown(KeyCode.A) && canMove) //Swipe left
+        if (Input.GetMouseButtonUp(0) && canMove)
         {
-            coroutineMovement = MovementCoroutine(-speed, 0, Vector3.left);
-            StartCoroutine(coroutineMovement);
-        }
-        else if (Input.GetKeyDown(KeyCode.W) && canMove) //Swipe up
-        {
-            coroutineMovement = MovementCoroutine(0, speed, Vector3.forward);
-            StartCoroutine(coroutineMovement);
-        }
-        else if (Input.GetKeyDown(KeyCode.S) && canMove) //Swipe down
-        {
-            coroutineMovement = MovementCoroutine(0, -speed, -Vector3.forward);
-            StartCoroutine(coroutineMovement);
+            fingerUp = Input.mousePosition;
+            fingerUpTime = DateTime.Now;
+            CheckSwipe();
         }
     }
 
@@ -74,6 +77,46 @@ public class Movement : MonoBehaviour
 
         otherTP.GetComponent<Collider>().enabled = false;
         transform.position = new Vector3(otherTP.transform.position.x, transform.position.y, otherTP.transform.position.z);
+    }
+
+
+    public void CheckSwipe()
+    {
+        float duration = (float)fingerUpTime.Subtract(fingerDownTime).TotalSeconds;
+
+        if(duration <= swipeTime)
+        {
+            float deltaX = fingerUp.x - fingerDown.x;
+            float deltaY = fingerUp.y - fingerDown.y;
+
+            if (Mathf.Abs(deltaX) > swipeDistance)
+            {
+                if(deltaX > 0) //derecha
+                {
+                    coroutineMovement = MovementCoroutine(speed, 0, Vector3.right);
+                    StartCoroutine(coroutineMovement);
+                }
+                else if(deltaX < 0) //izquierda
+                {
+                    coroutineMovement = MovementCoroutine(-speed, 0, Vector3.left);
+                    StartCoroutine(coroutineMovement);
+                }
+            }
+
+            if (Mathf.Abs(deltaY) > swipeDistance)
+            {
+                if (deltaY > 0) //arriba
+                {
+                    coroutineMovement = MovementCoroutine(0, speed, Vector3.forward);
+                    StartCoroutine(coroutineMovement);
+                }
+                else if (deltaY < 0) //abajo
+                {
+                    coroutineMovement = MovementCoroutine(0, -speed, -Vector3.forward);
+                    StartCoroutine(coroutineMovement);
+                }
+            }
+        }
     }
 
 }
