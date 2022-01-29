@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class CustomButton : Button
+public class CustomDimensionButton : Button
 {
     private DimensionHandler dimensionHandler;
     protected override void Start()
