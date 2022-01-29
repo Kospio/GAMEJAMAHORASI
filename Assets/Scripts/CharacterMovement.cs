@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     private bool canMove; //Hace que acelere antes de colisionar
     private bool canSwipe; //Evita que se pueda hacer un swipe una vez en movimiento
-    private bool canChangeDimension = true;
+    public bool canChangeDimension = true;
 
     public float waitTime = 0.1f; //Tiempo de control antes de que pueda volver a moverse tras colisionar
 
