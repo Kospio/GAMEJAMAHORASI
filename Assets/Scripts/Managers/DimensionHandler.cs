@@ -12,6 +12,7 @@ public class DimensionHandler : MonoBehaviour
     void Start()
     {
         currentDimension = LayerMask.GetMask("DIMENSION1");
+        mainCamera.cullingMask = currentDimension;
     }
 
     public void ChangeDimension()
@@ -33,7 +34,6 @@ public class DimensionHandler : MonoBehaviour
 
     public void ShowOtherDimension()
     {
-        Debug.Log(currentDimension.value);
         mainCamera.cullingMask = (mainCamera.cullingMask == LayerMask.GetMask("DIMENSION1")) ? mainCamera.cullingMask = LayerMask.GetMask("DIMENSION2") : mainCamera.cullingMask = LayerMask.GetMask("DIMENSION1");
     }
 
