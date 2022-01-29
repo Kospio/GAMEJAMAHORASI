@@ -9,7 +9,8 @@ public class CoordinateMovement : MonoBehaviour
     [Space(10)]
     [Header("--MOVEMENT--")]
     public Text MovementsText;
-    [SerializeField] private int movementsNumber;
+    [SerializeField] private int movements;
+    [SerializeField] private int maxMovements = 20;
     [SerializeField] private float speed = 3f;
 
     private bool canMove = true; //Hace que acelere antes de colisionar
@@ -35,20 +36,23 @@ public class CoordinateMovement : MonoBehaviour
 
     private void Start()
     {
-        MovementsText.text = "Movements: " + movementsNumber.ToString();
+        MovementsText.text = "Movements: " + movements.ToString();
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canMove)
+        if(movements <= maxMovements)
         {
-            fingerDown = Input.mousePosition;
-            fingerDownTime = DateTime.Now;
-        }
-        if (Input.GetMouseButtonUp(0) && canMove)
-        {
-            fingerUp = Input.mousePosition;
-            fingerUpTime = DateTime.Now;
-            CheckSwipe();
+            if (Input.GetMouseButtonDown(0) && canMove)
+            {
+                fingerDown = Input.mousePosition;
+                fingerDownTime = DateTime.Now;
+            }
+            if (Input.GetMouseButtonUp(0) && canMove)
+            {
+                fingerUp = Input.mousePosition;
+                fingerUpTime = DateTime.Now;
+                CheckSwipe();
+            }
         }
     }
 
@@ -79,8 +83,8 @@ public class CoordinateMovement : MonoBehaviour
             if (Rhit.distance > 0.51)
             {
                 dimensionHandler.ChangeDimension();
-                movementsNumber++;
-                MovementsText.text = "Movements: " +movementsNumber.ToString();
+                movements++;
+                MovementsText.text = "Movements: " + movements.ToString();
             }
 
             canMove = true;
