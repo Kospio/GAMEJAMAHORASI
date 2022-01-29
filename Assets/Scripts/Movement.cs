@@ -42,7 +42,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-
     IEnumerator MovementCoroutine(float xDistance, float zDistance, Vector3 rayDirection)
     {
         if(lastTP != null) StartCoroutine(reEnableTP());
@@ -71,6 +70,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+    #region TELEPORT
     public void Teleport(GameObject otherTP)
     {
         lastTP = otherTP;
@@ -85,12 +85,14 @@ public class Movement : MonoBehaviour
         canMove = true;
     }
     IEnumerator reEnableTP()
-    {
+    {    
         yield return new WaitForSeconds(2f);
         lastTP.GetComponent<BoxCollider>().enabled = true;
         lastTP = null;
     }
+    #endregion
 
+    #region SWIPE
     public void CheckSwipe()
     {
         float duration = (float)fingerUpTime.Subtract(fingerDownTime).TotalSeconds;
@@ -129,5 +131,6 @@ public class Movement : MonoBehaviour
             }
         }
     }
+    #endregion
 
 }
