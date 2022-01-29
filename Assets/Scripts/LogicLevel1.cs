@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameLogic : MonoBehaviour
+public class LogicLevel1 : MonoBehaviour
 {
+    public DimensionHandler dimensionHandler;
+
     [Header("Amplifier")]
     public bool gotAmplifier;
     public GameObject amplifier;
 
     [Space(10)]
     [Header("Amplifier")]
-    public bool gotTickets;
+    private bool gotTickets;
     public GameObject tickets;
 
     [Space(10)]
@@ -20,10 +22,8 @@ public class GameLogic : MonoBehaviour
     [Space(10)]
     [Header("Amplifier")]
     public GameObject door;
-    public bool finish;
+    private bool finish;
 
-    public DimensionHandler dimensionHandler;
-    // Start is called before the first frame update
     void Start()
     {
         dimensionHandler = dimensionHandler.GetComponent<DimensionHandler>();

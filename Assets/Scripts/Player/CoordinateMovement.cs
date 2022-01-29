@@ -31,7 +31,7 @@ public class CoordinateMovement : MonoBehaviour
 
     [Space(10)]
     [Header("--GameLogic & Handler--")]
-    public GameLogic gameLogic;
+    public LogicLevel1 gameLogic;
     public DimensionHandler dimensionHandler;
 
     [Space(10)]
