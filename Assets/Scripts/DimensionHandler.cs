@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DimensionHandler : MonoBehaviour
 {
-    [SerializeField] private LayerMask currentDimension;
+    [SerializeField] internal LayerMask currentDimension;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject player;
 
