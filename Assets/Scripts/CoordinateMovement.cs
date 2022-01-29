@@ -8,11 +8,12 @@ public class CoordinateMovement : MonoBehaviour
 {
     [Space(10)]
     [Header("--MOVEMENT--")]
+    public Text MovementsText;
+    [SerializeField] private int movementsNumber;
     [SerializeField] private float speed = 3f;
+
     private bool canMove = true; //Hace que acelere antes de colisionar
     private IEnumerator coroutineMovement;
-    public int contadorMovimientos;
-    public Text textoMovimientos; 
 
     [Space(10)]
     [Header("--SWIPE--")]
@@ -58,7 +59,7 @@ public class CoordinateMovement : MonoBehaviour
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
             {
-                Debug.Log(Rhit.distance);
+                //Debug.Log(Rhit.distance);
                 if (Rhit.collider.tag == "Bloque") //Hit
                 {
 
@@ -74,8 +75,8 @@ public class CoordinateMovement : MonoBehaviour
             if (Rhit.distance > 0.51)
             {
                 dimensionHandler.ChangeDimension();
-                contadorMovimientos++;
-                textoMovimientos.text = contadorMovimientos.ToString();
+                movementsNumber++;
+                MovementsText.text = "Movements" +movementsNumber.ToString();
             }
 
             canMove = true;
