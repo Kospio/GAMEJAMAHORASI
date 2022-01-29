@@ -26,6 +26,6 @@ public class LogicLevel2 : MonoBehaviour
 
     public void Checkpoint3Catched()
     {
-
+        Debug.Log("GANAS");
     }
 }

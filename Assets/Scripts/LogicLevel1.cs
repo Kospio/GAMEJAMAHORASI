@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LogicLevel1 : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class LogicLevel1 : MonoBehaviour
 
     public void Finish()
     {
+        SceneManager.LoadScene("Level2");
         Debug.Log("Final primer nivel");
     }
 
