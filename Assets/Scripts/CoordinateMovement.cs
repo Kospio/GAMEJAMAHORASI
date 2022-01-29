@@ -49,8 +49,6 @@ public class CoordinateMovement : MonoBehaviour
 
     IEnumerator Movement(Vector3 rayDirection)
     {
-        
-
         if (lastTP != null) StartCoroutine(reEnableTP());
 
         if (canMove)
@@ -87,20 +85,21 @@ public class CoordinateMovement : MonoBehaviour
     public void Teleport(GameObject otherTP)
     {
         lastTP = otherTP;
+        otherTP.GetComponent<Collider>().enabled = false;
 
         StopCoroutine(coroutineMovement);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        canMove = true;
 
         dimensionHandler.ChangeDimension();
-
-        otherTP.GetComponent<Collider>().enabled = false;
         transform.position = new Vector3(otherTP.transform.position.x, transform.position.y, otherTP.transform.position.z);
+
+        canMove = true;
     }
     IEnumerator reEnableTP()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         lastTP.GetComponent<BoxCollider>().enabled = true;
+        lastTP = null;
     }
 
     public void CheckSwipe()
