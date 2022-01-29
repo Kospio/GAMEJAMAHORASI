@@ -13,6 +13,8 @@ public class DimensionHandler : MonoBehaviour
     {
         currentDimension = LayerMask.GetMask("DIMENSION1");
         mainCamera.cullingMask = currentDimension;
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void ChangeDimension()
