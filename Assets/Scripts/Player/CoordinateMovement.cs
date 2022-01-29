@@ -235,13 +235,6 @@ public class CoordinateMovement : MonoBehaviour
             Debug.Log("Cojo Ticket"); 
             gameLogic.GetTicket(); 
         }
-
-        else if (other.CompareTag("Pinchos"))
-        {
-            soundController.Muerte(); 
-
-            fox.gameObject.GetComponent<Animator>().SetTrigger("Death");
-        }
     }
 
     public void Die()

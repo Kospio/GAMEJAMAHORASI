@@ -21,7 +21,13 @@ public class LogicLevel2 : MonoBehaviour
 
     public void CosasQueGiran()
     {
+        Vector3 Rot = objetoQueGira1.transform.eulerAngles;
+        Rot.y += 90;
+        objetoQueGira1.transform.eulerAngles = Rot;
 
+        Vector3 Rot2 = objetoQueGira2.transform.eulerAngles;
+        Rot2.y += 90;
+        objetoQueGira2.transform.eulerAngles = Rot2;
     }
 
     public void Checkpoint3Catched()

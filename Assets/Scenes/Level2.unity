@@ -6974,7 +6974,7 @@ GameObject:
   m_Layer: 6
   m_Name: CosaQueGira
   m_TagString: Bloque
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8939,7 +8939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoint3: {fileID: 477468856}
   objetoQueGira1: {fileID: 906842750}
-  objetoQueGira2: {fileID: 1777993257}
+  objetoQueGira2: {fileID: 1412001424}
 --- !u!1 &1072694269
 GameObject:
   m_ObjectHideFlags: 0
