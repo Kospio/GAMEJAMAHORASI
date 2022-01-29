@@ -58,7 +58,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.25878102
+        functionName: Paso
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 5c0fc63784844cf4ca195bb6729d14f4, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7557555
+        functionName: Paso
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 5c0fc63784844cf4ca195bb6729d14f4, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -36,10 +36,13 @@ public class CoordinateMovement : MonoBehaviour
 
     [Space(10)]
     [Header("--Fox--")]
-    public GameObject fox; 
+    public GameObject fox;
+    public SoundController soundController; 
 
     private void Start()
     {
+        soundController = soundController.GetComponent<SoundController>(); 
+
         if(GameManager.Instance.currentDifficulty == GameManager.DifficultLevely.Insane)
         {
             MovementsText.text = "Movements: " + movements.ToString() + " / " + maxMovements;
@@ -107,6 +110,8 @@ public class CoordinateMovement : MonoBehaviour
                 //Dimensions
                 dimensionHandler.ChangeDimension();
 
+                soundController.CambioDimension(); 
+
                 fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
                 //Movements
                 movements++;
@@ -126,6 +131,8 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Teleport(GameObject otherTP)
     {
+        soundController.Teleport(); 
+
         lastTP = otherTP;
         otherTP.GetComponent<Collider>().enabled = false;
 
@@ -203,30 +210,40 @@ public class CoordinateMovement : MonoBehaviour
     {
         if (other.CompareTag("Amplificador"))
         {
+            soundController.Agarrar(); 
+
             Debug.Log("Cojo ampli");
             gameLogic.GetAmplifier(); 
         }
 
         else if (other.CompareTag("Puerta"))
         {
+            soundController.Victoria(); 
+
             Debug.Log("Cojo puerta");
             gameLogic.Finish();
         }
 
         else if (other.CompareTag("DestapaPuerta"))
         {
+            soundController.Agarrar();
+
             Debug.Log("destapo puerta");
             gameLogic.DoorUntapped(); 
         }
 
         else if (other.CompareTag("Tickets"))
         {
+            soundController.Agarrar();
+
             Debug.Log("Cojo Ticket"); 
             gameLogic.GetTicket(); 
         }
 
         else if (other.CompareTag("Pinchos"))
         {
+            soundController.Muerte(); 
+
             fox.gameObject.GetComponent<Animator>().SetTrigger("Death");
         }
     }
