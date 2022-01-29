@@ -6,10 +6,11 @@ public class CharacterMovement : MonoBehaviour
 {
     private bool canMove; //Hace que acelere antes de colisionar
     private bool canSwipe; //Evita que se pueda hacer un swipe una vez en movimiento
+    private bool canChangeDimension = true;
 
     public float waitTime = 0.1f; //Tiempo de control antes de que pueda volver a moverse tras colisionar
 
-    public float speed = 2; //Velocidad de aceleracion
+    [Range(0,10)]public float speed = 2; //Velocidad de aceleracion
     public float maxSpeed = 10; //Velocidad máxima de velocidad
 
     [Space]
@@ -48,9 +49,10 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bloque"))
+        if (collision.gameObject.CompareTag("Bloque") && canChangeDimension)
         {
-            dimensionHandler.ChangeDimension(); 
+            canChangeDimension = false;
+            dimensionHandler.ChangeDimension();
             StartCoroutine(StopMovement());
         }
     }
@@ -62,13 +64,15 @@ public class CharacterMovement : MonoBehaviour
         while (canMove)
         {
             rb.AddForce(new Vector3(xSpeed, 0, zSpeed), ForceMode.Force);
-
             if (rb.velocity.x <= speedLimit)
             {
                 rb.velocity = new Vector3(speedLimit, 0, 0);
             }
+            Debug.Log(rb.velocity);
             yield return null;
         }
+
+        canChangeDimension = true;
     }
 
     IEnumerator StopMovement()
@@ -78,5 +82,17 @@ public class CharacterMovement : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         canMove = true;
         canSwipe = true;
+    }
+
+    public void Teleport(GameObject otherTP)
+    {
+        canSwipe = false;
+
+        dimensionHandler.ChangeDimension();
+
+        otherTP.GetComponent<Collider>().enabled = false;
+        transform.position = new Vector3(otherTP.transform.position.x, transform.position.y, otherTP.transform.position.z);
+
+        StartCoroutine(StopMovement());
     }
 }
