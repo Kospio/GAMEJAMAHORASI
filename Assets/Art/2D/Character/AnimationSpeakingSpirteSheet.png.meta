@@ -1,0 +1,720 @@
+fileFormatVersion: 2
+guid: 93fe041b9d7ac4142b79b94f07015f0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6221672917433651978
+    second: AnimationSpeakingSpirteSheet_0
+  - first:
+      213: -3228811827976407106
+    second: AnimationSpeakingSpirteSheet_1
+  - first:
+      213: -4179248894822786521
+    second: AnimationSpeakingSpirteSheet_2
+  - first:
+      213: 2951671591612893683
+    second: AnimationSpeakingSpirteSheet_3
+  - first:
+      213: -7122528801489056966
+    second: AnimationSpeakingSpirteSheet_4
+  - first:
+      213: -5702868093750054578
+    second: AnimationSpeakingSpirteSheet_5
+  - first:
+      213: -8574591512178643133
+    second: AnimationSpeakingSpirteSheet_6
+  - first:
+      213: 397305255278361875
+    second: AnimationSpeakingSpirteSheet_7
+  - first:
+      213: -1979002555282938275
+    second: AnimationSpeakingSpirteSheet_8
+  - first:
+      213: -7288848385590854398
+    second: AnimationSpeakingSpirteSheet_9
+  - first:
+      213: -5042157061263885410
+    second: AnimationSpeakingSpirteSheet_10
+  - first:
+      213: 3109069502854939279
+    second: AnimationSpeakingSpirteSheet_11
+  - first:
+      213: 5526012717190492080
+    second: AnimationSpeakingSpirteSheet_12
+  - first:
+      213: 3095887317080555427
+    second: AnimationSpeakingSpirteSheet_13
+  - first:
+      213: 4052650625946934409
+    second: AnimationSpeakingSpirteSheet_14
+  - first:
+      213: -1585526194912223191
+    second: AnimationSpeakingSpirteSheet_15
+  - first:
+      213: 3768529663453390892
+    second: AnimationSpeakingSpirteSheet_16
+  - first:
+      213: -3524823444247315167
+    second: AnimationSpeakingSpirteSheet_17
+  - first:
+      213: -8665604573652048319
+    second: AnimationSpeakingSpirteSheet_18
+  - first:
+      213: -3504560585155483939
+    second: AnimationSpeakingSpirteSheet_19
+  - first:
+      213: 219805129194594090
+    second: AnimationSpeakingSpirteSheet_20
+  - first:
+      213: 4081369923319336275
+    second: AnimationSpeakingSpirteSheet_21
+  - first:
+      213: 8278598867512851360
+    second: AnimationSpeakingSpirteSheet_22
+  - first:
+      213: 1275138018974637974
+    second: AnimationSpeakingSpirteSheet_23
+  - first:
+      213: -1623186289860259853
+    second: AnimationSpeakingSpirteSheet_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9920
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fce2b7027d28a9a0800000000000000
+      internalID: -6221672917433651978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 9920
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7f2eadfb4f033d0800000000000000
+      internalID: -3228811827976407106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 9920
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ad424d5435006c0800000000000000
+      internalID: -4179248894822786521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 9920
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9c2b78ca176f820800000000000000
+      internalID: 2951671591612893683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 9920
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b81c4bac1b72d90800000000000000
+      internalID: -7122528801489056966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7440
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e417e1f0fa75bd0b0800000000000000
+      internalID: -5702868093750054578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 7440
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f2386237ee00980800000000000000
+      internalID: -8574591512178643133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 7440
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d33405603838500800000000000000
+      internalID: 397305255278361875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 7440
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5625c249ab2984e0800000000000000
+      internalID: -1979002555282938275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 7440
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d7d23e20fc8da90800000000000000
+      internalID: -7288848385590854398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4960
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b73a50ed8a60ab0800000000000000
+      internalID: -5042157061263885410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 4960
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f824ba38d32a52b20800000000000000
+      internalID: 3109069502854939279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 4960
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf2e68c94750bc40800000000000000
+      internalID: 5526012717190492080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 4960
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af3937bc1dc6fa20800000000000000
+      internalID: 3095887317080555427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 4960
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cd45eb548ed3830800000000000000
+      internalID: 4052650625946934409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2480
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9202e2283541ff9e0800000000000000
+      internalID: -1585526194912223191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 2480
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2869ab23c18c4430800000000000000
+      internalID: 3768529663453390892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 2480
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d7ba5b0cf451fc0800000000000000
+      internalID: -3524823444247315167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 2480
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14628777d869db780800000000000000
+      internalID: -8665604573652048319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 2480
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6e8fb37bc4d5fc0800000000000000
+      internalID: -3504560585155483939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fd375b997ec0300800000000000000
+      internalID: 219805129194594090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 0
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d896c3250f3a830800000000000000
+      internalID: 4081369923319336275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 0
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abfd00eecd73e270800000000000000
+      internalID: 8278598867512851360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 0
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f1494b54332b110800000000000000
+      internalID: 1275138018974637974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSpeakingSpirteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 0
+        width: 1558
+        height: 2480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff489c5ba84979e0800000000000000
+      internalID: -1623186289860259853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
