@@ -29,9 +29,11 @@ public class DimensionHandler : MonoBehaviour
         {
             currentDimension = LayerMask.GetMask("DIMENSION1");
         }
-            
+        
+        //camera
         mainCamera.cullingMask = currentDimension;
 
+        //player
         player.layer = (int)Mathf.Log(currentDimension.value, 2);
         Transform[] allPlayerChildren = player.GetComponentsInChildren<Transform>();
         foreach (Transform child in allPlayerChildren)
