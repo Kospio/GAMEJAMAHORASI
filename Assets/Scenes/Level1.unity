@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4375884, g: 0.4854375, b: 0.5657158, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2569,7 +2569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 391f51c30ea1c714da74aada64ae730b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.245
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 391f51c30ea1c714da74aada64ae730b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3805,7 +3805,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4423dc241e8bc142aece6a46fc90827, type: 2}
+  - {fileID: 2100000, guid: a87ee35f61d787a41843ac1436db2e22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6206,7 +6206,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4423dc241e8bc142aece6a46fc90827, type: 2}
+  - {fileID: 2100000, guid: 9f8ff1d0aa596a541ba34af27cb41b09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9326,19 +9326,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071078
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710576
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9346,7 +9346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 9048248873305303002, guid: 997afa62b814af74f8ffa4422dbd5b24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -21014,7 +21014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624430341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 0.3, z: 2}
+  m_LocalPosition: {x: 13, y: 0.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 543450652259981684}
@@ -22860,7 +22860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1934869959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23341,7 +23341,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -23392,13 +23392,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970128612}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.18969339, y: 0.71326536, z: -0.61553687, w: 0.2763755}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2141651644}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 79.4, y: 119.1, z: -22.244}
 --- !u!1 &1982925817
 GameObject:
   m_ObjectHideFlags: 0
