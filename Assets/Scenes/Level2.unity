@@ -3372,6 +3372,8 @@ MonoBehaviour:
     m_Bits: 64
   mainCamera: {fileID: 1946246668}
   player: {fileID: 442398714}
+  musicaKawaiAudioSource: {fileID: 1464072774}
+  musicaMetalAudioSource: {fileID: 1946246670}
 --- !u!114 &375158382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11895,6 +11897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+--- !u!82 &1464072774 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2013237267576828157, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+  m_PrefabInstance: {fileID: 1464072773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1466831422
 GameObject:
   m_ObjectHideFlags: 0
