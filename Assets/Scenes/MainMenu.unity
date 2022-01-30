@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KORPUSCULUS
+  m_text: HAGAKURE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
   m_sharedMaterial: {fileID: -5871473878251551749, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
