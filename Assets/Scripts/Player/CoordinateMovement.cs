@@ -77,11 +77,12 @@ public class CoordinateMovement : MonoBehaviour
 
     IEnumerator Movement(Vector3 rayDirection)
     {
-        if (lastTP != null) StartCoroutine(reEnableTP());
 
         if (canMove)
         {
             canMove = false;
+
+            if (lastTP != null) StartCoroutine(reEnableTP());
 
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
@@ -145,9 +146,12 @@ public class CoordinateMovement : MonoBehaviour
     }
     IEnumerator reEnableTP()
     {
-        yield return new WaitForSeconds(2f);
-        lastTP.GetComponent<BoxCollider>().enabled = true;
-        lastTP = null;
+        if (lastTP != null)
+        {
+            yield return new WaitForSeconds(2f);
+            lastTP.GetComponent<BoxCollider>().enabled = true;
+            lastTP = null;
+        }
     }
 
     public void CheckSwipe()
