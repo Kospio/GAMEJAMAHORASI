@@ -143,6 +143,7 @@ public class CoordinateMovement : MonoBehaviour
 
         dimensionHandler.ChangeDimension();
         transform.position = new Vector3(otherTP.transform.position.x, transform.position.y, otherTP.transform.position.z);
+        fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
 
         canMove = true;
     }
