@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 2013237266570343133}
   - component: {fileID: 2013237266570343130}
   - component: {fileID: 2013237266570343132}
+  - component: {fileID: 5772221695137488077}
   m_Layer: 6
   m_Name: --PLAYER--
   m_TagString: Player
@@ -274,6 +275,7 @@ MonoBehaviour:
   speed: 5
   swipeDistance: 60
   swipeTime: 1
+  lastTP: {fileID: 0}
   gameLogic: {fileID: 0}
   dimensionHandler: {fileID: 0}
   fox: {fileID: 1671149308746108336}
@@ -424,6 +426,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013237266570343135}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5772221695137488077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013237266570343135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ab45a6580ab5044a393e968d3401ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyebrowsMat: {fileID: 6792459884968785987}
+  dressMat: {fileID: 3411751232421186587}
+  eyebrow_DIM1_Text: {fileID: 2800000, guid: 6f945b38ca9c8c448a97fb3f3f4c6955, type: 3}
+  eyebrow_DIM2_Text: {fileID: 2800000, guid: 589ec04a229ad5249a5d7c8c3055671e, type: 3}
+  dress_DIM1_Text: {fileID: 2800000, guid: 550858d7c98a0ad449abe850b32d6340, type: 3}
+  dress_DIM2_Text: {fileID: 2800000, guid: 49007ce711085614ca599c51fd22fdb7, type: 3}
 --- !u!1001 &393301879099431933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -980,6 +1000,16 @@ GameObject:
 --- !u!4 &2052178932123555594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad977f51ab49a0948a9126aaa6e8e5cb, type: 3}
+  m_PrefabInstance: {fileID: 2013237267576828129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6792459884968785987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5022603096738039970, guid: ad977f51ab49a0948a9126aaa6e8e5cb, type: 3}
+  m_PrefabInstance: {fileID: 2013237267576828129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3411751232421186587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3794437767531461882, guid: ad977f51ab49a0948a9126aaa6e8e5cb, type: 3}
   m_PrefabInstance: {fileID: 2013237267576828129}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4541558920552127563 stripped

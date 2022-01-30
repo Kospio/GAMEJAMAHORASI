@@ -12,6 +12,10 @@ public class DimensionHandler : MonoBehaviour
     public AudioSource musicaKawaiAudioSource;
     public AudioSource musicaMetalAudioSource;
 
+    //Events
+    public delegate void EndGame();
+    public event EndGame OnDimensionChanged;
+
     void Start()
     {
         currentDimension = LayerMask.GetMask("DIMENSION1");
@@ -47,6 +51,8 @@ public class DimensionHandler : MonoBehaviour
         {
             child.gameObject.layer = (int)Mathf.Log(currentDimension.value, 2);
         }
+
+        OnDimensionChanged();
     }
 
     public void ShowOtherDimension()
