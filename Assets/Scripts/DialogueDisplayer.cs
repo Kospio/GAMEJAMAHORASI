@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueDisplayer : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class DialogueDisplayer : MonoBehaviour
         else if(currentDialogue == dialogues.Count - 1) //ultimo dialogo
         {
             //cambio de escena al juego
+            SceneManager.LoadScene("Level1");
         }
     }
     public void PreviousDialogue()
