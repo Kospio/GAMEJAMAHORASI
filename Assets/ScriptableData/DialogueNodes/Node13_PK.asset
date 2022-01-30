@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77595bc8a8dd6df48ad7ba9a08f1100b, type: 3}
-  m_Name: Node1
+  m_Name: Node13_PK
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 739530079299136851, guid: 8d1e8c523098ebb47a2f656eccf179a9, type: 3}
-  dialogueText: Hola soy xxxxx
+  characterSprite: {fileID: 8278598867512851360, guid: 93fe041b9d7ac4142b79b94f07015f0e, type: 3}
+  dialogueText: Y eso empieza hoy, pero necesito ayuda.
