@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LogicLevel2 : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class LogicLevel2 : MonoBehaviour
     public GameObject objetoQueGira2;
 
     private int checkpoint2 = 0;
+
+    [Space(10)]
+    [Header("UI")]
+    public RawImage silueta;
     public void CheckCheckpoint2()
     {
         checkpoint2++;
@@ -33,5 +39,13 @@ public class LogicLevel2 : MonoBehaviour
     public void Checkpoint3Catched()
     {
         Debug.Log("GANAS");
+        StartCoroutine(ChangeScene()); 
+    }
+
+    public IEnumerator ChangeScene()
+    {
+        silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("Level2");
     }
 }
