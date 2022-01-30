@@ -131,6 +131,8 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Teleport(GameObject otherTP)
     {
+        movements++;
+
         soundController.Teleport();
 
         lastTP = otherTP;
