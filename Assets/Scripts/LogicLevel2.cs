@@ -65,6 +65,6 @@ public class LogicLevel2 : MonoBehaviour
     {
         silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
         yield return new WaitForSeconds(1.7f);
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Credits");
     }
 }
