@@ -5,8 +5,6 @@ using UnityEngine;
 public class SoundController : MonoBehaviour
 {
     public AudioSource SFXAudioSource;
-    public AudioSource musicaKawaiAudioSource; 
-    public AudioSource musicaMetalAudioSource; 
 
     public AudioClip pasos; 
     public AudioClip muerte; 
@@ -38,18 +36,6 @@ public class SoundController : MonoBehaviour
 
     public void CambioDimension()
     {
-        if (musicaKawaiAudioSource.volume != 1)
-        {
-            musicaKawaiAudioSource.volume = 1;
-            musicaMetalAudioSource.volume = 0; 
-        }
-
-        else
-        {
-            musicaMetalAudioSource.volume = 1; 
-            musicaKawaiAudioSource.volume = 0; 
-        }
-
         SFXAudioSource.clip = cambioDimension;
         SFXAudioSource.Play();
     }

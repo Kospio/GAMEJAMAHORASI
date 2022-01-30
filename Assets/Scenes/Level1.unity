@@ -3307,6 +3307,8 @@ MonoBehaviour:
     m_Bits: 64
   mainCamera: {fileID: 1946246668}
   player: {fileID: 205005520}
+  musicaKawaiAudioSource: {fileID: 1414707764}
+  musicaMetalAudioSource: {fileID: 1946246670}
 --- !u!114 &375158382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11185,6 +11187,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412001424}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1414707764 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2013237267576828157, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+  m_PrefabInstance: {fileID: 2013237266506895375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428335124
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class DimensionHandler : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject player;
 
+    public AudioSource musicaKawaiAudioSource;
+    public AudioSource musicaMetalAudioSource;
+
     void Start()
     {
         currentDimension = LayerMask.GetMask("DIMENSION1");
@@ -19,6 +22,18 @@ public class DimensionHandler : MonoBehaviour
 
     public void ChangeDimension()
     {
+        if (musicaKawaiAudioSource.volume != 1)
+        {
+            musicaKawaiAudioSource.volume = 1;
+            musicaMetalAudioSource.volume = 0;
+        }
+
+        else
+        {
+            musicaMetalAudioSource.volume = 1;
+            musicaKawaiAudioSource.volume = 0;
+        }
+
         //if 1 => 2  //if 2 => 1
         currentDimension = (currentDimension == LayerMask.GetMask("DIMENSION1")) ? currentDimension = LayerMask.GetMask("DIMENSION2") : currentDimension = LayerMask.GetMask("DIMENSION1");
 
