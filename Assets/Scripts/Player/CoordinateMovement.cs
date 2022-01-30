@@ -154,7 +154,7 @@ public class CoordinateMovement : MonoBehaviour
     {
         if (lastTP != null)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             //lastTP.GetComponent<BoxCollider>().enabled = true;
             if (lastTP.TryGetComponent(out BoxCollider coll))
             {
