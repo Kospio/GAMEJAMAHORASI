@@ -15,6 +15,8 @@ public class DialogueDisplayer : MonoBehaviour
     [Header("--DIALOGUE OBJECTS--")]
     public List<DialogueNode> dialogues;
 
+    public RawImage silueta;
+
     private void Start()
     {
         playerImage.sprite = dialogues[0].characterSprite;
@@ -32,7 +34,7 @@ public class DialogueDisplayer : MonoBehaviour
         {
             //cambio de escena al juego
 
-            SceneManager.LoadScene("Level1");
+            StartCoroutine(NextScene()); 
         }
     }
     public void PreviousDialogue()
@@ -48,5 +50,12 @@ public class DialogueDisplayer : MonoBehaviour
     {
         playerImage.sprite = dialogues[dialogueNumber].characterSprite;
         dialogueText.text = dialogues[dialogueNumber].dialogueText;
+    }
+
+    public IEnumerator NextScene()
+    {
+        silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("Level1");
     }
 }

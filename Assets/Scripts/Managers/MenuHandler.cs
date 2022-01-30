@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuHandler : MonoBehaviour
 {
     public Dropdown dropDown;
+    public RawImage silueta;
 
     public void changeDificulty()
     {
@@ -34,6 +35,18 @@ public class MenuHandler : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void StartButtonAtajo()
+    {
+        StartCoroutine(StartButton()); 
+    }
+
+    public IEnumerator StartButton()
+    {
+        silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("Tutorial");
     }
 
 }
