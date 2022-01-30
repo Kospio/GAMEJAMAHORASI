@@ -16158,6 +16158,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1347944461079250809, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b3022f3274a7bb4ab1a7e46482194b3, type: 2}
     - target: {fileID: 2013237266570343127, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
       propertyPath: gameLogic
       value: 
@@ -16218,9 +16222,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: --PLAYER--
       objectReference: {fileID: 0}
-    - target: {fileID: 2013237267576828156, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
-      propertyPath: musicaMetalAudioSource
-      value: 
-      objectReference: {fileID: 1946246670}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
