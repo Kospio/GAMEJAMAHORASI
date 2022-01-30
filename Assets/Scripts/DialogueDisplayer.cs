@@ -31,6 +31,7 @@ public class DialogueDisplayer : MonoBehaviour
         else if(currentDialogue == dialogues.Count - 1) //ultimo dialogo
         {
             //cambio de escena al juego
+
             SceneManager.LoadScene("Level1");
         }
     }
