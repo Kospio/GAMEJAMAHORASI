@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.70152587, g: 0.5874636, b: 1.0786306, a: 1}
+  m_IndirectSpecularColor: {r: 0.70152384, g: 0.5874619, b: 1.0786294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,7 +307,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177422531}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -316,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -108.32211, y: 0.000002861}
+  m_AnchoredPosition: {x: -124.02872, y: -7}
   m_SizeDelta: {x: 225.5617, y: 371.72}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &177422533
@@ -843,7 +843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 173.7428, y: 48.8349}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1063368200
@@ -926,8 +926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 48, y: 7}
-  m_SizeDelta: {x: 565.278, y: 184.8163}
+  m_AnchoredPosition: {x: 47.9788, y: 7}
+  m_SizeDelta: {x: 647.9001, y: 184.8163}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1256312649
 MonoBehaviour:
@@ -1309,7 +1309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1729628924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,15 +1442,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "pero sola nunca llegar\xE9 a ser Mushin. Necesito encontrarme yo, aceptarme\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ae10d3d6c0cd18c408f906e65d9373e4, type: 2}
-  m_sharedMaterial: {fileID: 3424817895462935447, guid: ae10d3d6c0cd18c408f906e65d9373e4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
+  m_sharedMaterial: {fileID: 7261846020334219414, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278650631
+  m_fontColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1467,8 +1467,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.74
-  m_fontSizeBase: 21.74
+  m_fontSize: 34.4
+  m_fontSizeBase: 34.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -96.071106, y: -28.821358, z: -148.91028, w: -33.624905}
+  m_margin: {x: -155.11069, y: -28.821358, z: -185.45857, w: -52.37424}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
