@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
 
 public class LogicLevel1 : MonoBehaviour
 {
@@ -12,18 +13,22 @@ public class LogicLevel1 : MonoBehaviour
     public GameObject amplifier;
 
     [Space(10)]
-    [Header("Amplifier")]
+    [Header("Tickets")]
     private bool gotTickets;
     public GameObject tickets;
 
     [Space(10)]
-    [Header("Amplifier")]
+    [Header("DootUntap")]
     public GameObject doorUntapp;
 
     [Space(10)]
-    [Header("Amplifier")]
+    [Header("Puerta")]
     public GameObject door;
     private bool finish;
+
+    [Space(10)]
+    [Header("UI")]
+    public RawImage silueta; 
 
     void Start()
     {
@@ -65,8 +70,15 @@ public class LogicLevel1 : MonoBehaviour
 
     public void Finish()
     {
-        SceneManager.LoadScene("Level2");
+        StartCoroutine(ChangeScene());
         Debug.Log("Final primer nivel");
+    }
+
+    public IEnumerator ChangeScene()
+    {
+        silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene"); 
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("Level2");
     }
 
 }

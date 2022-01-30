@@ -30,9 +30,4 @@ public class GameManager : MonoBehaviour
     {
         currentDifficulty = newDifficulty;
     }
-
-    public void ChangeScene(string levelName)
-    {
-        SceneManager.LoadScene(levelName); 
-    }
 }

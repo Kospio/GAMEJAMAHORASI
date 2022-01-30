@@ -36,8 +36,4 @@ public class MenuHandler : MonoBehaviour
         Application.Quit();
     }
 
-    public void ChangeScene(string levelName)
-    {
-        SceneManager.LoadScene(levelName);
-    }
 }
