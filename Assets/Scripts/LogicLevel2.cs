@@ -16,12 +16,17 @@ public class LogicLevel2 : MonoBehaviour
     private GameObject player; 
     public GameObject fox;
 
+    public List<GameObject> TpsGO;
+
+    public bool interruptorTP; 
+
     [Space(10)]
     [Header("UI")]
     public RawImage silueta;
 
     private void Start()
     {
+        interruptorTP = true; 
         player = GameObject.FindGameObjectWithTag("Player");   
     }
 
@@ -66,5 +71,27 @@ public class LogicLevel2 : MonoBehaviour
         silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
         yield return new WaitForSeconds(1.7f);
         SceneManager.LoadScene("Credits");
+    }
+
+    public void TeleportSwitch()
+    {
+        if (interruptorTP)
+        {
+            foreach(GameObject go in TpsGO)
+            {
+                go.SetActive(false); 
+            }
+
+            interruptorTP = false; 
+        }
+        else
+        {
+            foreach (GameObject go in TpsGO)
+            {
+                go.SetActive(true);
+            }
+
+            interruptorTP = true;
+        }
     }
 }
