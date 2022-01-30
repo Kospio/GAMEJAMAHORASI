@@ -3153,7 +3153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &369489643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7767,6 +7767,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968857630}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &973384273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1671149308746108336, guid: 004bffe3ddebe6b4289a71a095778514, type: 3}
+  m_PrefabInstance: {fileID: 1464072773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990176112
 GameObject:
   m_ObjectHideFlags: 0
@@ -8747,6 +8752,7 @@ MonoBehaviour:
   checkpoint3: {fileID: 477468856}
   objetoQueGira1: {fileID: 906842750}
   objetoQueGira2: {fileID: 1412001424}
+  fox: {fileID: 973384273}
   silueta: {fileID: 369489645}
 --- !u!1 &1072694269
 GameObject:

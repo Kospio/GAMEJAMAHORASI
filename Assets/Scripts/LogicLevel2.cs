@@ -13,9 +13,25 @@ public class LogicLevel2 : MonoBehaviour
 
     private int checkpoint2 = 0;
 
+    private GameObject player; 
+    public GameObject fox;
+
     [Space(10)]
     [Header("UI")]
     public RawImage silueta;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");   
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Checkpoint3Catched(); 
+        }
+    }
     public void CheckCheckpoint2()
     {
         checkpoint2++;
@@ -38,6 +54,9 @@ public class LogicLevel2 : MonoBehaviour
 
     public void Checkpoint3Catched()
     {
+        player.GetComponent<CoordinateMovement>().speed = 0;
+        fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
+
         Debug.Log("GANAS");
         StartCoroutine(ChangeScene()); 
     }

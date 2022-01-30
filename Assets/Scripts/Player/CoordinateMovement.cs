@@ -11,7 +11,7 @@ public class CoordinateMovement : MonoBehaviour
     public Text MovementsText;
     [SerializeField] private int movements;
     [SerializeField] private int maxMovements = 20;
-    [SerializeField] private float speed = 3f;
+    [SerializeField] public float speed = 3f;
 
     private bool canMove = true; //Hace que acelere antes de colisionar
     private IEnumerator coroutineMovement;
@@ -218,6 +218,9 @@ public class CoordinateMovement : MonoBehaviour
 
             Debug.Log("Cojo puerta");
             gameLogic.Finish();
+            speed = 0;
+            fox.gameObject.GetComponent<Animator>().SetTrigger("Idle");
+
         }
 
         else if (other.CompareTag("DestapaPuerta"))
@@ -239,7 +242,7 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Die()
     {
-        canMove = false;
+        speed = 0;
         Debug.Log("DIEEEEEEEEEEEE");
         fox.gameObject.GetComponent<Animator>().SetTrigger("Die");
     }
