@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: 0}
+  m_AnchoredPosition: {x: -19, y: -12}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762752437
@@ -325,11 +325,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Alvaro Buitron Morales\r\nLaura Schober Blanco\r\nLucia Fernandez Tamargo\r\nMikel
-    Carpio Garcia\nSergio Uceda Diaz\r "
+  m_text: "\xC1lvaro Buitr\xF3n Morales\r\nLaura Schober Blanco\r\nLuc\xEDa Fern\xE1ndez
+    Tamargo\r\nMikel Carpio Garc\xEDa\nSergio Uceda D\xEDaz\r "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
-  m_sharedMaterial: {fileID: -5871473878251551749, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ae10d3d6c0cd18c408f906e65d9373e4, type: 2}
+  m_sharedMaterial: {fileID: 3424817895462935447, guid: ae10d3d6c0cd18c408f906e65d9373e4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 10.25
+  m_lineSpacing: -34.57
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1059,6 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropDown: {fileID: 0}
+  silueta: {fileID: 0}
 --- !u!4 &1973178772
 Transform:
   m_ObjectHideFlags: 0
