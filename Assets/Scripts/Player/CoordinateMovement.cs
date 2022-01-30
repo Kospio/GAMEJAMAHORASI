@@ -27,7 +27,8 @@ public class CoordinateMovement : MonoBehaviour
 
     [Space(10)]
     [Header("--TP--")]
-    private GameObject lastTP;
+    public GameObject lastTP;
+    private bool isTPMode = false;
 
     [Space(10)]
     [Header("--GameLogic & Handler--")]
@@ -82,7 +83,7 @@ public class CoordinateMovement : MonoBehaviour
         {
             canMove = false;
 
-            if (lastTP != null) StartCoroutine(reEnableTP());
+            if (lastTP != null && !isTPMode) StartCoroutine(reEnableTP());
 
             RaycastHit Rhit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(rayDirection), out Rhit, 1000, dimensionHandler.currentDimension))
@@ -131,6 +132,8 @@ public class CoordinateMovement : MonoBehaviour
 
     public void Teleport(GameObject otherTP)
     {
+        isTPMode = true;
+
         movements++;
 
         soundController.Teleport();
@@ -152,8 +155,17 @@ public class CoordinateMovement : MonoBehaviour
         if (lastTP != null)
         {
             yield return new WaitForSeconds(2f);
-            lastTP.GetComponent<BoxCollider>().enabled = true;
+            //lastTP.GetComponent<BoxCollider>().enabled = true;
+            if (lastTP.TryGetComponent(out BoxCollider coll))
+            {
+                Debug.Log("coll activatedddd");
+                coll.enabled = true;
+            }
+
+
+            yield return null;
             lastTP = null;
+            isTPMode = false;
         }
     }
 
