@@ -28,13 +28,13 @@ public class TextureChange : MonoBehaviour
     {
         if(dimensionHandler.currentDimension == LayerMask.GetMask("DIMENSION1"))
         {
-            Debug.Log("DIMENSION 1");
+            Debug.Log("DIMENSION CUTE");
             eyebrowsMat.GetComponent<SkinnedMeshRenderer>().material.mainTexture = eyebrow_DIM1_Text;
             dressMat.GetComponent<SkinnedMeshRenderer>().material.mainTexture = dress_DIM1_Text;
         }
         else
         {
-            Debug.Log("DIMENSION 2");
+            Debug.Log("DIMENSION HEAVY");
             eyebrowsMat.GetComponent<SkinnedMeshRenderer>().material.mainTexture = eyebrow_DIM2_Text;
             dressMat.GetComponent<SkinnedMeshRenderer>().material.mainTexture = dress_DIM2_Text;
         }
