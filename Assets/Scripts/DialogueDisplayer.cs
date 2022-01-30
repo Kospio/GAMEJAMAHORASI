@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class DialogueDisplayer : MonoBehaviour
 {
@@ -11,16 +12,20 @@ public class DialogueDisplayer : MonoBehaviour
     public Image playerImage;
     public TextMeshProUGUI dialogueText;
     private int currentDialogue = 0;
+    public RawImage silueta;
 
     [Header("--DIALOGUE OBJECTS--")]
     public List<DialogueNode> dialogues;
 
-    public RawImage silueta;
+    [Header("--EVENTS--")]
+    public UnityEvent onFirstNode;
+    public UnityEvent onLastNode;
 
     private void Start()
     {
         playerImage.sprite = dialogues[0].characterSprite;
         dialogueText.text = dialogues[0].dialogueText;
+        onFirstNode.Invoke();
     }
 
     public void NextDialogue()
@@ -32,8 +37,7 @@ public class DialogueDisplayer : MonoBehaviour
         }
         else if(currentDialogue == dialogues.Count - 1) //ultimo dialogo
         {
-            //cambio de escena al juego
-
+            onLastNode.Invoke();
             StartCoroutine(NextScene()); 
         }
     }
