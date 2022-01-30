@@ -578,6 +578,20 @@ MonoBehaviour:
   dialogues:
   - {fileID: 11400000, guid: 0963dadc113266743be95fc858522d3c, type: 2}
   - {fileID: 11400000, guid: 6881d93c5ea9d674796409ab9a5c21be, type: 2}
+  - {fileID: 11400000, guid: 03d08bc82c1417c4792bbef3dcd89873, type: 2}
+  - {fileID: 11400000, guid: 88d934ea8a97e8b42a9d820c24e2ebd6, type: 2}
+  - {fileID: 11400000, guid: 589914a26b988e948be150ed8949aee8, type: 2}
+  - {fileID: 11400000, guid: 74e60171909e46144ac4c6d2e9dc5207, type: 2}
+  - {fileID: 11400000, guid: ab51a18c38dbaf9448d056b8e1a8f3f2, type: 2}
+  - {fileID: 11400000, guid: e8d57212dd441b64ea6757aac2264df2, type: 2}
+  - {fileID: 11400000, guid: a5658a13fd4ff6c46b4d45afe3969513, type: 2}
+  - {fileID: 11400000, guid: d26a6aec02726bb4eac16b6d11c32754, type: 2}
+  - {fileID: 11400000, guid: 05ad1d001ff3f85458af5c675fdd44e3, type: 2}
+  - {fileID: 11400000, guid: bb087b0b4ca9f244f9050bb1a72ccfa1, type: 2}
+  - {fileID: 11400000, guid: bba900ffae0d0af4f8d28d09c779d3e7, type: 2}
+  - {fileID: 11400000, guid: 27d3afdc73aac694dae32cf8274a655c, type: 2}
+  - {fileID: 11400000, guid: 9d475ee65589a1c4c8e98a92beeb10e0, type: 2}
+  - {fileID: 11400000, guid: 7fd1ab80232e27c469e54b94594e29e6, type: 2}
   onFirstNode:
     m_PersistentCalls:
       m_Calls: []
@@ -1317,7 +1331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  m_text: "pero sola nunca llegar\xE9 a ser Mushin. Necesito encontrarme yo, aceptarme\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
   m_sharedMaterial: {fileID: -5871473878251551749, guid: 95994d92aaf89ed4d9d20f9131554a4c, type: 2}
