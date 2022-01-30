@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeleportMat1
+  m_Name: TeleportMat1 2
   m_Shader: {fileID: 4800000, guid: addf760996e7e05409e0074f3cc74eb7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -77,6 +77,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.10850932, g: 0.7254902, b: 0, a: 1}
+    - _Color: {r: 0.55345905, g: 0.6672832, b: 1, a: 1}
     - _EmissionColor: {r: 0.5, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
