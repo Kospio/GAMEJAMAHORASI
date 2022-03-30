@@ -37,7 +37,6 @@ public class DialogueDisplayer : MonoBehaviour
         }
         else if(currentDialogue == dialogues.Count - 1) //ultimo dialogo
         {
-            onLastNode.Invoke();
             StartCoroutine(NextScene()); 
         }
     }
@@ -59,7 +58,9 @@ public class DialogueDisplayer : MonoBehaviour
     public IEnumerator NextScene()
     {
         silueta.gameObject.GetComponent<Animator>().SetTrigger("NextScene");
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1.4f);
+        onLastNode.Invoke();
+        yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene("Level1");
     }
 }

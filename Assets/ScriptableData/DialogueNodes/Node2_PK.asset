@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Node2_PK
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 3109069502854939279, guid: 93fe041b9d7ac4142b79b94f07015f0e, type: 3}
-  dialogueText: "\xFAltimamente tengo la cabeza en otras cosas\u2026 No s\xE9 qu\xE9
+  dialogueText: "\xFAltimamente tengo la cabeza en otras cosas\u2026 No se qu\xE9
     me pasa\u2026 "
