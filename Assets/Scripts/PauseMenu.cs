@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     [Header("UI")]
     public Canvas pauseCanvas;
     public Slider volumeSlider;
+    public Button restartButton;
 
 
     public void SetVolume()
@@ -36,12 +38,19 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0f;
             pauseCanvas.enabled = true;
+            restartButton.enabled = false;
         }
         else //Quitar pausa
         {
             Time.timeScale = 1f;
             pauseCanvas.enabled = false;
+            restartButton.enabled = true;
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ExitGame()
